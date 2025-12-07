@@ -1,0 +1,47 @@
+<!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GECC Member Tracker - Dashboard</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f5f5f5; margin: 0; }
+        header { background-color: #0066cc; color: white; padding: 20px; text-align: center; }
+        .container { display: flex; flex-wrap: wrap; justify-content: space-around; padding: 20px; }
+        .card { background-color: white; width: 250px; margin: 10px; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center; }
+        h2, h3 { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>GECC Member Tracker Dashboard</h1>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Total Members</h2>
+            <h3 id="totalMembers">0</h3>
+        </div>
+        <div class="card">
+            <h2>First-Timers This Week</h2>
+            <h3 id="firstTimers">0</h3>
+        </div>
+        <div class="card">
+            <h2>Upcoming Birthdays</h2>
+            <h3 id="birthdays">0</h3>
+        </div>
+        <div class="card">
+            <h2>Attendance Today</h2>
+            <h3 id="attendance">0</h3>
+        </div>
+    </div>
+
+    <script>
+        // Temporary hardcoded data (will connect to Firebase later)
+        document.getElementById('totalMembers').innerText = 150;
+        document.getElementById('firstTimers').innerText = 5;
+        document.getElementById('birthdays').innerText = 3;
+        document.getElementById('attendance').innerText = 120;
+    </script>
+</body>
+</html>￼Enter

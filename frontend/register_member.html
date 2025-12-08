@@ -78,8 +78,37 @@
         const unit = document.getElementById('unit').value;
         const birthday = document.getElementById('birthday').value;
 
-        document.getElementById('message').innerText = "Member recorded (not saved yet).";
+            <script>
+    const memberForm = document.getElementById('memberForm');
+
+    memberForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const fullname = document.getElementById('fullname').value;
+        const phone = document.getElementById('phone').value;
+        const gender = document.getElementById('gender').value;
+        const unit = document.getElementById('unit').value;
+        const birthday = document.getElementById('birthday').value;
+
+        try {
+            await db.collection("members").add({
+                fullname: fullname,
+                phone: phone,
+                gender: gender,
+                unit: unit,
+                birthday: birthday,
+                createdAt: new Date()
+            });
+
+            document.getElementById('message').innerText = "Member saved successfully!";
+            memberForm.reset();
+        } 
+        catch (error) {
+            document.getElementById('message').style.color = "red";
+            document.getElementById('message').innerText = "Error: " + error.message;
+        }
     });
+</script>               
 </script>
     // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";

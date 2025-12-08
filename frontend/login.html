@@ -39,6 +39,27 @@
                 document.getElementById('message').innerText = "Incorrect username or password";
             }
         });
+        <script>
+    const loginForm = document.getElementById('loginForm');
+
+    loginForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        try {
+            await auth.signInWithEmailAndPassword(email, password);
+
+            // Redirect to dashboard
+            window.location.href = "dashboard.html";
+        } 
+        catch (error) {
+            document.getElementById('message').style.color = "red";
+            document.getElementById('message').innerText = error.message;
+        }
+    });
+</script>
     </script>
     // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";

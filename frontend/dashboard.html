@@ -7,7 +7,7 @@
     <style>
         body { font-family: Arial, sans-serif; background-color: #f5f5f5; margin: 0; }
         header { background-color: #0066cc; color: white; padding: 20px; text-align: center; }
-        .container { display: flex; flex-wrap: wrap; justify-content: space-around; padding: 20px; }
+        .container { display: flex; flex-wrap: wrap; justify-content: space-around; padding: 20px; },
         .card { background-color: white; width: 250px; margin: 10px; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); text-align: center; }
         h2, h3 { margin: 10px 0; }
     </style>
@@ -43,5 +43,22 @@
         document.getElementById('birthdays').innerText = 3;
         document.getElementById('attendance').innerText = 120;
     </script>
+    // Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAkMZBtWS417RoeOyCtywZaRPFt_vsjlrg",
+  authDomain: "gecc-member-tracker.firebaseapp.com",
+  projectId: "gecc-member-tracker",
+  storageBucket: "gecc-member-tracker.firebasestorage.app",
+  messagingSenderId: "1052189008462",
+  appId: "1:1052189008462:web:a94a0fd4b58629088dd91f"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 </body>
 </html>￼Enter
